@@ -13,7 +13,7 @@ public class HomeController {
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("title", "Welcome to My Spring Boot + Thymeleaf Website!");
-        model.addAttribute("message", "This is a simple one-page website built with Spring Boot and Thymeleaf. Thank You");
+        model.addAttribute("message", "This is a simple one-page website built with Spring Boot and Thymeleaf.");
         return "index";
     }
 }
