@@ -26,7 +26,7 @@ jobs:
       - name: Extract version
         id: extract_version
         run: |
-          VERSION=$(xmllint --xpath "//*[local-name()='project']/*[local-name()='version']/text()" pom.xml)
+          VERSION=$(./mvnw help:evaluate -Dexpression=project.version -q -DforceStdout)
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
       - name: Build and Test
